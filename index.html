@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-<header><a class="brand" href="https://nickg.si" aria-label="Nickova domača stran">nickg<span> / quest</span></a><span class="mono header-note">stranske misije / v1.2</span></header>
+<header><a class="brand" href="https://nickg.si" aria-label="Nickova domača stran">nickg<span> / quest</span></a><span class="mono header-note">stranske misije / v1.3</span></header>
 <main>
 <div class="eyebrow">Dolgčas ima težavo.</div>
 <h1>Gumb za <span>slabe</span><br>odločitve.</h1>
@@ -20,7 +20,7 @@
 <div class="button-stage"><button class="quest-button" id="draw" type="button" aria-label="Izžrebaj naključen sidequest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z" stroke-linejoin="round"/></svg><span id="button-label">DAJ MI QUEST</span></button></div>
 <p class="hint">Posledice so lahko: svež zrak, nova ideja ali dobra zgodba.</p>
 <section class="card" id="card" aria-live="polite" aria-atomic="true">
-<div class="card-top"><span class="tag" id="category">TVOJA NASLEDNJA MISIJA</span><span class="mono" id="number">— / 43</span></div>
+<div class="card-top"><span class="tag" id="category">TVOJA NASLEDNJA MISIJA</span><span class="mono" id="number">— / 67</span></div>
 <p class="quest-text" id="quest">Pritisni gumb.<br>Dolgčas se ne bo odpravil sam.</p>
 <p class="detail" id="detail">Sidequesti se premešajo. Vsak pride na vrsto, preden se ponovi.</p>
 </section>
@@ -244,6 +244,126 @@ const quests = [
     "OSMA POSTAJA",
     "Pojdi na železniško postajo, vkrcaj se na prvi vlak, za katerega lahko kupiš ustrezno vozovnico, in izstopi osem postaj naprej.",
     "Prej preveri postanke in povratek. Če jih ima vlak manj kot osem, izberi naslednjega. Razišči kraj, ki ti ga je izbral vozni red."
+  ],
+  [
+    "IZLET IZ KLOBUKA",
+    "S prijatelji napišite pet krajev na listke. Izžrebajte enega in se še isti dan odpravite tja.",
+    ""
+  ],
+  [
+    "SKRIVNI ORGANIZATOR",
+    "Eden iz družbe organizira izlet. Ostali izvedo samo uro odhoda, strošek in kaj morajo vzeti s sabo.",
+    "Destinacija ostane skrivnost."
+  ],
+  [
+    "NAJCENEJŠI ZAKLAD",
+    "Na bolšjem sejmu ima vsak pet evrov za najbolj nenavadno najdbo.",
+    "Nato predstavite predmete, kot da ste strokovnjaki v oddaji o starinah."
+  ],
+  [
+    "TRI JEDI, TRIJE LOKALI",
+    "Predjed, glavno jed in sladico pojejte vsakokrat v drugem lokalu.",
+    "Naslednjo lokacijo izbere drug član družbe."
+  ],
+  [
+    "ODPRAVA ZA RAZGLEDNICO",
+    "Obišči bližnji kraj samo zato, da tam kupiš razglednico in jo pošlješ prijatelju.",
+    "Napiši, kot da si na ekspediciji na drugem koncu sveta."
+  ],
+  [
+    "GEOCACHE ODPRAVA",
+    "S prijateljem poiščita skriti geocache v kraju, kjer še nista bila.",
+    "Zaklad naj bo povod za raziskovanje okolice."
+  ],
+  [
+    "ZA ZADNJIM AVTOBUSOM",
+    "Pelji se z avtobusom do končne postaje. Tam poišči nekaj za pojesti in zanimivo točko za ogled.",
+    "Prej preveri povratek."
+  ],
+  [
+    "VEČER PO TUJEM SCENARIJU",
+    "Prosi prijatelja, ki ne gre s tabo, naj ti napiše tri postanke za večerni izlet.",
+    "Odpiraj jih enega za drugim."
+  ],
+  [
+    "PALAČINKE OB SONČNEM VZHODU",
+    "S prijatelji specite palačinke ob sončnem vzhodu.",
+    "Bonus točke, če jih pečete zunaj v naravi na kuhalni plošči ali gorilniku."
+  ],
+  [
+    "ODPRAVA ZA ENO FOTOGRAFIJO",
+    "Poišči staro fotografijo svojega kraja. Odpravi se na isto mesto in poskusi ponoviti kader.",
+    ""
+  ],
+  [
+    "NAROČILO PRESENEČENJA",
+    "Pojdi v restavracijo in prosi natakarja, naj ti izbere jed.",
+    ""
+  ],
+  [
+    "UGLEDNA DEGUSTACIJSKA KOMISIJA",
+    "Kupite tri najcenejše različice istega prigrizka.",
+    "Oblecite se pretirano slovesno in izvedite slepo degustacijo."
+  ],
+  [
+    "IZLET V SLAVNOSTNIH OBLAČILIH",
+    "S prijatelji se uredite, kot da greste na pomembno prireditev.",
+    "Nato pojdite na minigolf ali po burek."
+  ],
+  [
+    "VEČERJA BREZ SKUPNEGA NAČRTA",
+    "Vsak prijatelj prinese eno sestavino. Ko se dobite, iz njih sestavite večerjo.",
+    "Dostava je rezervni načrt, ne poraz."
+  ],
+  [
+    "KONCERT BREZ PREDZNANJA",
+    "Pojdi na nastop izvajalca, katerega glasbe še nisi slišal.",
+    "Pred dogodkom ne poslušaj niti ene njegove pesmi."
+  ],
+  [
+    "IZ PESMI V RESNIČNOST",
+    "Naredi nekaj, kar opisuje besedilo pesmi.",
+    "Na primer: pojdi kolesarit od Izole do Kopra, kot pojejo Zmelkow."
+  ],
+  [
+    "PRENOČIŠČE POD ZVEZDAMI",
+    "S prijatelji prespite na prostem na dovoljenem mestu.",
+    "Izberite lahko dostopno lokacijo, preverite vreme in zjutraj pripravite skupni zajtrk."
+  ],
+  [
+    "OTOK ZA EN DAN",
+    "Izberi dostopen otok ali kraj, do katerega prideš z ladjo.",
+    "Odpravi se tja z majhnim nahrbtnikom in se vrni še isti dan."
+  ],
+  [
+    "ODPRAVA PO PRIPOROČILIH",
+    "Začni pri znancu in ga vprašaj, kateri kraj moraš obiskati.",
+    "Tam vprašaj nekoga za naslednji predlog. Po petih priporočilih končaj izlet."
+  ],
+  [
+    "KULINARIČNI POTNI LIST",
+    "V enem popoldnevu poskusite tri majhne jedi iz treh različnih držav.",
+    "Vsak izbere eno in vodi družbo do nje."
+  ],
+  [
+    "NAKLJUČNI ŠPORTNI NAVIJAČI",
+    "S prijatelji pojdite na lokalno tekmo športa, ki ga skoraj ne poznate.",
+    "Izberite ekipo in se poskusite naučiti pravil med tekmo."
+  ],
+  [
+    "LOV NA ČUDNO IME",
+    "Na zemljevidu poišči bližnji kraj z najbolj nenavadnim imenom.",
+    "Obišči ga in naredi fotografijo ob tabli."
+  ],
+  [
+    "SPOROČILO IZ EKSPEDICIJE",
+    "Pojdi na enodnevni izlet in prijatelju pošlji tri fotografije namigov.",
+    "Do večera naj ugotovi, kje si."
+  ],
+  [
+    "DVA RAZLIČNA IZLETA",
+    "S prijateljem začnita na istem mestu in se za eno uro odpravita vsak v svojo smer.",
+    "Nato se dobita in drug drugega odpeljita do svoje najboljše najdbe."
   ]
 ];
 let bag = [], previous = -1, drawn = 0;
