@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-<header><a class="brand" href="https://nickg.si" aria-label="Nickova domača stran">nickg<span> / quest</span></a><span class="mono header-note">stranske misije / v1.1</span></header>
+<header><a class="brand" href="https://nickg.si" aria-label="Nickova domača stran">nickg<span> / quest</span></a><span class="mono header-note">stranske misije / v1.2</span></header>
 <main>
 <div class="eyebrow">Dolgčas ima težavo.</div>
 <h1>Gumb za <span>slabe</span><br>odločitve.</h1>
@@ -20,7 +20,7 @@
 <div class="button-stage"><button class="quest-button" id="draw" type="button" aria-label="Izžrebaj naključen sidequest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z" stroke-linejoin="round"/></svg><span id="button-label">DAJ MI QUEST</span></button></div>
 <p class="hint">Posledice so lahko: svež zrak, nova ideja ali dobra zgodba.</p>
 <section class="card" id="card" aria-live="polite" aria-atomic="true">
-<div class="card-top"><span class="tag" id="category">TVOJA NASLEDNJA MISIJA</span><span class="mono" id="number">— / 30</span></div>
+<div class="card-top"><span class="tag" id="category">TVOJA NASLEDNJA MISIJA</span><span class="mono" id="number">— / 43</span></div>
 <p class="quest-text" id="quest">Pritisni gumb.<br>Dolgčas se ne bo odpravil sam.</p>
 <p class="detail" id="detail">Sidequesti se premešajo. Vsak pride na vrsto, preden se ponovi.</p>
 </section>
@@ -179,6 +179,71 @@ const quests = [
     "PO NAVODILIH PRIJATELJA",
     "Prosi prijatelja, naj ti izbere eno zanimivo mesto v okolici, in pojdi tja.",
     "Naj ti šele ob prihodu pove, zakaj ga je izbral."
+  ],
+  [
+    "DRUGA PISAVA",
+    "Nauči se napisati svoje ime v drugi pisavi, na primer v cirilici ali arabščini.",
+    "Zapiši ga na kartico in jo obdrži kot svoj novi skrivni podpis."
+  ],
+  [
+    "VEČERJA NA ENO ČRKO",
+    "Pojdi v trgovino in sestavi obrok iz sestavin, katerih imena se začnejo z isto črko.",
+    "Paradižnik, paprika, polenta? Izberi črko, nato naj trgovina napiše jedilnik."
+  ],
+  [
+    "DRUGA ROKA, ISTA STEZA",
+    "Pojdi na bowling in poskusi zadeti strike z roko, ki je običajno ne uporabljaš.",
+    "Vzemi lažjo kroglo. Tokrat ima tvoja slabša roka glavno vlogo."
+  ],
+  [
+    "CVET ZA LEPŠI DAN",
+    "Kupi cvet in ga ponudi prvi osebi, za katero se ti zdi, da ima težek dan.",
+    "Preprosto vprašaj, ali bi ga želela. Če odkloni, prijazno nadaljuj pot."
+  ],
+  [
+    "KOMPLIMENT ZA NEZNANCA",
+    "Napiši lep kompliment na samolepilni listek in ga pusti na javnem mestu.",
+    "Izberi oglasno desko, kjer so sporočila dovoljena. Nekdo bo naletel na majhno presenečenje."
+  ],
+  [
+    "ENOROKA KUHINJA",
+    "S prijatelji pripravite večerjo, pri kateri lahko vsak uporablja samo eno roko.",
+    "Pri sestavljanju sendvičev ali zavitkov velja ena roka. Za nože in vroče posode uporabite obe."
+  ],
+  [
+    "NAKLJUČNI SOIGRALEC",
+    "Prijazno vprašaj neznanca, ali bi naredila skupni selfie za spomin na ta dan.",
+    "Pojasni svoj sidequest. Fotografiraj le, če se strinja; pred objavo vprašaj še za dovoljenje."
+  ],
+  [
+    "ODA LEVEMU SOSEDU",
+    "Napiši kratko pesem o predmetu, ki je trenutno na tvoji levi.",
+    "Posveti jo temu predmetu z vso resnostjo, ki si je najbrž ne zasluži."
+  ],
+  [
+    "DESET PETK",
+    "Zberi petke od desetih različnih ljudi.",
+    "Povabi jih k sodelovanju in povej, da opravljaš sidequest. Vsaka prostovoljna petka šteje."
+  ],
+  [
+    "NAVIGATOR NA SLEPO",
+    "S prijateljem pojdita na izlet z avtom. Sopotnik z zavezanimi očmi izbira smer na križiščih.",
+    "Voznik ima oči odprte in izbira le med dovoljenimi, varnimi smermi. Sopotnik ostane pripet; po pol ure odkrijta, kam sta prispela."
+  ],
+  [
+    "INŠPEKTOR BREZ ZVEZDICE",
+    "Obišči najslabše ocenjeno restavracijo v okolici in jo oceni kot Michelinov inšpektor.",
+    "Zase si zapiši vtise o hrani, postrežbi in vzdušju. Če objaviš oceno, naj bo poštena; osebju se ne predstavljaj kot pravi inšpektor."
+  ],
+  [
+    "NOČNA ODPRAVA",
+    "Pojdi na nočni izlet v naključno izbran kraj.",
+    "Izžrebaj enega od treh bližnjih krajev, povabi prijatelja in raziščita osvetljeno središče. Pred odhodom uredita povratek."
+  ],
+  [
+    "OSMA POSTAJA",
+    "Pojdi na železniško postajo, vkrcaj se na prvi vlak, za katerega lahko kupiš ustrezno vozovnico, in izstopi osem postaj naprej.",
+    "Prej preveri postanke in povratek. Če jih ima vlak manj kot osem, izberi naslednjega. Razišči kraj, ki ti ga je izbral vozni red."
   ]
 ];
 let bag = [], previous = -1, drawn = 0;
