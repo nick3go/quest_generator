@@ -366,6 +366,7 @@ const quests = [
     "Nato se dobita in drug drugega odpeljita do svoje najboljše najdbe."
   ]
 ];
+document.getElementById('number').textContent = '— / ' + quests.length;
 let bag = [], previous = -1, drawn = 0;
 function shuffle(){
   bag = quests.map((_,i)=>i);
