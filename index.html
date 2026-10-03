@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101013">
+<meta name="description" content="En gumb. Naključen izziv. Malo manj dolgčasa. Nickov generator stranskih misij.">
+<title>Quest — gumb za slabe odločitve</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101013'/%3E%3Cpath d='M18 4 8 18h7l-1 10 10-14h-7z' fill='%23ff4545'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#101013;--ink:#f5f4f2;--muted:#a7a7af;--red:#ff4545}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100svh;display:flex;flex-direction:column}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:64px 64px;z-index:-1}a{color:inherit;text-decoration:none}a:hover{color:var(--red)}header,footer{width:min(1080px,100%);margin:auto;display:flex;justify-content:space-between;align-items:center;padding:28px 30px;gap:20px}.brand{font-weight:850;font-size:22px;letter-spacing:-1px}.brand span{color:var(--red)}.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:14px;color:var(--muted)}main{width:min(780px,100%);margin:auto;text-align:center;padding:30px 24px 44px}.eyebrow{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--red);font-size:14px;letter-spacing:2px;text-transform:uppercase}h1{font-size:clamp(36px,7vw,64px);line-height:1.06;letter-spacing:-.055em;margin:18px 0}h1 span{color:var(--red)}.intro{color:var(--muted);line-height:1.65;font-size:17px;margin:0}.button-stage{padding:34px 0 28px;display:flex;justify-content:center}.quest-button{appearance:none;border:1px solid #ff7373;border-radius:50%;width:172px;height:172px;background:linear-gradient(145deg,#ff5454,#de2525);box-shadow:0 9px 0 #8f171b,0 13px 0 9px #222226,0 20px 45px #ed303022;color:white;font-size:17px;font-weight:800;cursor:pointer;transition:transform .13s,box-shadow .13s;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.quest-button:hover{background:linear-gradient(145deg,#ff6868,#ed3030)}.quest-button:active{transform:translateY(7px);box-shadow:0 2px 0 #8f171b,0 6px 0 9px #222226,0 12px 40px #ed303022}.quest-button svg{width:30px;height:30px}.quest-button:focus-visible,a:focus-visible{outline:3px solid white;outline-offset:7px}.hint{font-size:14px;color:var(--muted);margin:8px 0 24px}.card{text-align:left;background:#19191f;border:1px solid #323239;border-radius:18px;padding:26px 28px;min-height:194px;position:relative}.card-top{display:flex;justify-content:space-between;gap:16px;margin-bottom:22px}.tag{color:var(--red);font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:14px}.quest-text{font-size:clamp(21px,4vw,28px);font-weight:650;line-height:1.4;letter-spacing:-.025em;margin:0}.detail{font-size:15px;color:var(--muted);line-height:1.6;margin:14px 0 0}.card.pop{animation:reveal .25s ease-out}@keyframes reveal{from{opacity:.45;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}footer{border-top:1px solid #25252c;color:var(--muted);font-size:14px;flex-wrap:wrap}noscript{display:block;color:#ff9494;margin:20px} @media(max-width:500px){header,footer{padding:22px}main{padding:20px 22px 36px}.card{padding:22px;min-height:210px}.header-note{font-size:12px}.quest-button{width:152px;height:152px}footer{font-size:12px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="https://nickg.si" aria-label="Nickova domača stran">nickg<span> / quest</span></a><span class="mono header-note">stranske misije / v1.0</span></header>
+<main>
+<div class="eyebrow">Dolgčas ima težavo.</div>
+<h1>Gumb za <span>slabe</span><br>odločitve.</h1>
+<p class="intro">En klik. En izziv. Pa da vidimo, kam te odnese.</p>
+<div class="button-stage"><button class="quest-button" id="draw" type="button" aria-label="Izžrebaj naključen izziv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7z" stroke-linejoin="round"/></svg><span id="button-label">DAJ MI IZZIV</span></button></div>
+<p class="hint">Posledice so lahko: svež zrak, nova ideja ali dobra zgodba.</p>
+<section class="card" id="card" aria-live="polite" aria-atomic="true">
+<div class="card-top"><span class="tag" id="category">TVOJA NASLEDNJA MISIJA</span><span class="mono" id="number">— / 30</span></div>
+<p class="quest-text" id="quest">Pritisni gumb.<br>Dolgčas se ne bo odpravil sam.</p>
+<p class="detail" id="detail">Izzivi se premešajo. Vsak pride na vrsto, preden se ponovi.</p>
+</section>
+<noscript>Za žrebanje izzivov omogoči JavaScript v brskalniku.</noscript>
+</main>
+<footer><a href="https://nickg.si">© Nick Gatnik</a><span>Odlične zgodbe se redko začnejo z »ostal sem na kavču«.</span></footer>
+<script>
+'use strict';
+const quests = [
+['NA PROSTO','Pojdi na sprehod. Na vsakem križišču vrzi kovanec za smer.','Izberi pešpoti, po 20 minutah pa poišči pot domov.'],
+['USTVARJAJ','V 20 minutah sprogramiraj nekaj popolnoma nepotrebnega.','Merilnik dramatičnosti mačjega mijavkanja? Končno prava tehnologija.'],
+['NAUČI SE','Danes se nauči enega čarovniškega trika.','Nato ga pokaži nekomu. Skrivnost ostane tvoja.'],
+['DRUŽBA','Pošlji prijatelju samo: »Misija se začne ob 18:00.«','Če je ura že mimo, izberi jutri. Nato dejansko predlagaj nekaj zabavnega.'],
+['NA PROSTO','Poišči ulico v svoji okolici, po kateri še nikoli nisi hodil.','Pojdi pogledat, kaj si do zdaj zamujal.'],
+['USTVARJAJ','Nariši svoj izmišljeni izum. Dodaj tri popolnoma nepotrebne funkcije.','Če nima držala za piškote, še ni dokončan.'],
+['OPAZUJ','Fotografiraj pet stvari iste barve.','Poišči jih zunaj ali doma. Ne prestavljaj predmetov za popoln kader.'],
+['DRUŽBA','Povabi prijatelja na sprehod brez vnaprej izbrane poti.','Edini načrt: dobita se in pojdita.'],
+['NAUČI SE','Nauči se nov vozel in ga zaveži brez gledanja.','Vrvica iz predala je dovolj.'],
+['USTVARJAJ','Iz papirja naredi letalo. Nato izboljšaj njegov rekord.','Tri različice, tri testne polete. Znanost, samo bolj zabavna.'],
+['OPAZUJ','Poišči tri obraze v vsakdanjih predmetih.','Vtičnice imajo presenetljivo bogato čustveno življenje.'],
+['USTVARJAJ','Napiši zgodbo v natanko šestih besedah.','Naj bo smešna, skrivnostna ali popolnoma čudna.'],
+['NA PROSTO','Pojdi za 15 minut ven brez slušalk.','Poskusi prepoznati pet različnih zvokov.'],
+['NAUČI SE','Nauči se pozdraviti v treh novih jezikih.','En pozdrav danes uporabi na glas.'],
+['DRUŽBA','Vprašaj nekoga za najbolj smešno zgodbo iz njegove mladosti.','Potem povej še eno svojo.'],
+['USTVARJAJ','Sestavi 30-sekundni napovednik za čisto navaden predmet.','Žlica. To poletje. V vseh kuhinjah.'],
+['USTVARJAJ','Nariši isti predmet z dominantno in drugo roko.','Druga različica gre lahko v muzej sodobne umetnosti.'],
+['NA PROSTO','Poišči zanimivo senco in jo fotografiraj.','Za glavno vlogo lahko kandidira tudi kolo.'],
+['NAUČI SE','Nauči se povedati svoje ime v Morsejevi abecedi.','Nato ga odtrkavaj po mizi.'],
+['USTVARJAJ','Izmisli si logotip za podjetje, ki prodaja dolgčas.','Tvoja naloga je, da tudi dolgočasno izgleda dobro.'],
+['DRUŽBA','Pošlji nekomu iskreno zahvalo za majhno stvar.','Brez posebne priložnosti.'],
+['OPAZUJ','Najdi najstarejši predmet v svoji sobi in ugotovi njegovo zgodbo.','Vprašaj, od kod je prišel.'],
+['USTVARJAJ','Naredi deset fotografij enega predmeta iz različnih kotov.','Izberi eno, na kateri ga skoraj ne prepoznaš.'],
+['NAUČI SE','Nauči se nov ritmični vzorec in ga odigraj na mizi.','Domači koncert. Vstop prost.'],
+['NA PROSTO','Poišči drevo, ki ga ne znaš poimenovati. Ugotovi, katero je.','Opazuj liste, lubje in obliko krošnje.'],
+['USTVARJAJ','Napiši tri absurdna imena za svoj naslednji projekt.','Eno naj zveni kot resno podjetje, drugo kot skrivna operacija.'],
+['DRUŽBA','Izzovi prijatelja: kdo v minuti nariše boljšo žirafo?','Brez referenčne slike. Anatomija naj se znajde.'],
+['USTVARJAJ','Sestavi majhen stolp iz stvari na svoji mizi.','Uporabi nelomljive predmete. Višino izmeri s svinčnikom.'],
+['OPAZUJ','Za pet minut sedi pri oknu in opazuj svet.','Zapiši eno podrobnost, ki je običajno ne opaziš.'],
+['USTVARJAJ','Izmisli si svoj praznik in način praznovanja.','Dan izgubljenih nogavic že ima dovolj privržencev.']
+];
+let bag = [], previous = -1, drawn = 0;
+function shuffle(){
+  bag = quests.map((_,i)=>i);
+  for(let i=bag.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[bag[i],bag[j]]=[bag[j],bag[i]];}
+  if(bag[bag.length-1]===previous){[bag[0],bag[bag.length-1]]=[bag[bag.length-1],bag[0]];}
+  drawn=0;
+}
+document.getElementById('draw').addEventListener('click',()=>{
+  if(!bag.length)shuffle();
+  previous=bag.pop();drawn++;
+  const [category,quest,detail]=quests[previous];
+  document.getElementById('category').textContent=category;
+  document.getElementById('quest').textContent=quest;
+  document.getElementById('detail').textContent=detail;
+  document.getElementById('number').textContent=String(drawn).padStart(2,'0')+' / '+quests.length;
+  document.getElementById('button-label').textContent='ŠE EN IZZIV';
+  const card=document.getElementById('card');card.classList.remove('pop');void card.offsetWidth;card.classList.add('pop');
+});
+</script>
+</body>
+</html>
